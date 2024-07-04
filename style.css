@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #280808;
+    font-weight: lighter;
+}
+
+body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    min-height: 100vh;
+}
+
+.todo-container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff200;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+#inputField #todoInput {
+    width: calc(100% - 55px);
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#inputField #addBtn {
+    position: relative;
+    width: 45px;
+    height: 35px;
+    border: none;
+    background-color: #280808;
+    border-radius: 4px;
+    cursor: pointer;
+    vertical-align: middle;
+    color: white;
+}
+
+#todoList {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#todoList li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 100%;
+    user-select: none;
+    font-size: smaller;
+    display: flex;
+}
+
+#todoList button {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000000;
+    margin-left: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left:auto;
+}
+
+#todoList li.complete {
+    text-decoration-line: line-through;
+}
+
+#todoList li.complete button::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    transform: translate(-2px, -2px) rotate(45deg);
+    border-right: 2px solid #280808;
+    border-bottom: 2px solid #280808;
+}
